@@ -1,0 +1,20 @@
+mkdir Assignments
+cd Assignments/
+touch README.txt
+git add -A
+git commit -m "commiting README file"
+git branch html-assignments
+git checkout html-assignments
+cp ../Project_dir/index.html  ../Project_dir/Assignments/
+git add -A
+git commit -m "commit copy file in html branch"
+git commit -a -m "commiting index copy changes in html assignment"
+git checkout master
+git add -A
+git commit -m "commint changes in master"
+git checkout html-assignments
+git add -A
+git commit -m "final commit in html branch modified index"
+git checkout master
+git merge html-assignments
+git branch -d html-assignments
